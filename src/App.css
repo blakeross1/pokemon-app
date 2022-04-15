@@ -17,7 +17,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,17 @@
   }
 }
 
+.Pokemon-attack {
+  background-color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(3px + 2vmin);
+  color: #282c34;
+}
+
 .player1 {
   float: left;
   margin: 50px;
@@ -49,6 +60,70 @@
 
 }
 
+.Pokemon-image {
+  margin-bottom: -45px;
+  margin-top: -20px;
+
+}
+
+.Pokemon-name {
+  background-color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px);
+  color: #282c34;
+
+}
+
+.Pokemon-details {
+  background-color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px);
+  color: #282c34;
+}
+
+
+.Pokemon-dead {
+  background-color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px);
+  color: #282c34;
+  animation: hideme 3s ease-in 3s;
+  animation-fill-mode: forwards;
+
+}
+.Pokemon-damage {
+  background-color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px);
+  color: #282c34;
+  animation: hideme 3s ease-in 3s;
+  animation-fill-mode: forwards;
+
+}
+@keyframes hideme {
+  from{
+    opacity: 100;
+  }
+  to {
+  opacity: 0;
+  }
+}
 
 /* CSS */
 .button-18 {
@@ -65,13 +140,12 @@
   font-weight: 600;
   justify-content: center;
   line-height: 20px;
+  margin: 5px;
   max-width: 480px;
   min-height: 40px;
   min-width: 0px;
   overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px;
   text-align: center;
   touch-action: manipulation;
   transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -84,15 +158,4 @@
 .button-18:focus { 
   background-color: #16437E;
   color: #ffffff;
-}
-
-.button-18:active {
-  background: #09223b;
-  color: rgb(255, 255, 255, .7);
-}
-
-.button-18:disabled { 
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, .08);
-  color: rgba(0, 0, 0, .3);
 }

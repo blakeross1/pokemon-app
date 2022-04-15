@@ -30,9 +30,12 @@ def pokemon():
 
 
     pokemon_data = {}
+    pokemon_data['id'] = id
     pokemon_data['name'] = p1.json()['name']
     pokemon_data['hp'] = p1.json()['base_experience']
-    pokemon_data['moves'] = p1.json()['moves'][0]['move']['name']
+    length = len(p1.json()['moves'])
+    randommove = random.randint(0,length)
+    pokemon_data['moves'] = p1.json()['moves'][randommove]['move']['name']
     pokemon_data['img'] = p1.json()['sprites']['front_default']
 
     json_data = json.dumps(pokemon_data)
